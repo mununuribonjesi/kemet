@@ -33,26 +33,17 @@ namespace AMF
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp/src";
-                if (env.IsDevelopment())
-                {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
-            });
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseHsts();
-            }
 
-            app.UseHttpsRedirection();
-            app.UseMvc();
+
+            app.UseStaticFiles();
+            app.UseCors(builder => builder.AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowAnyOrigin()
+              .Build());
+            app.UseSpaStaticFiles();
+
+
 
             app.UseMvc(routes =>
             {
@@ -60,6 +51,20 @@ namespace AMF
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+                if (env.IsDevelopment())
+                {
+                    spa.Options.StartupTimeout = new TimeSpan(0, 0, 80);
+                    spa.UseAngularCliServer(npmScript: "start");
+                }
+            });
+
+
+
+
         }
     }
 }
