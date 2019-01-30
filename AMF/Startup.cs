@@ -27,14 +27,13 @@ namespace AMF
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
+          
+              services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
-
 
             app.UseStaticFiles();
             app.UseCors(builder => builder.AllowAnyMethod()
@@ -42,8 +41,6 @@ namespace AMF
               .AllowAnyOrigin()
               .Build());
             app.UseSpaStaticFiles();
-
-
 
             app.UseMvc(routes =>
             {
@@ -61,9 +58,6 @@ namespace AMF
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
-
-
-
 
         }
     }
