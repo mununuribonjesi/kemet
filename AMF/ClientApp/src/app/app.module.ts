@@ -10,11 +10,12 @@ import { RouterModule } from '../../node_modules/@angular/router';
   declarations: [
     AppComponent,
       HomeComponent,
-      RouterModule
+         
   ],
   imports: [
     BrowserModule,
       AppRoutingModule,
+      RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
