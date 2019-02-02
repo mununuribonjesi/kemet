@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '../../node_modules/@angular/router';
+import {PaginatorModule} from 'primeng/paginator';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RouterModule } from '../../node_modules/@angular/router';
   imports: [
     BrowserModule,
       AppRoutingModule,
-      RouterModule
+      RouterModule,
+      PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

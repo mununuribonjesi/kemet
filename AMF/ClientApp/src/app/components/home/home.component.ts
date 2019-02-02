@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import {artist} from './../../Interfaces/artist'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+    public artistInformation: artist[] = [];
+    public artistInfo: artist;
+  
   constructor() { }
 
-  ngOnInit() {
+    ngOnInit() 
+    {
+      
+        
+         
+  
   }
 
 }
