@@ -17,4 +17,10 @@
   <ItemGroup>
     <Compile Remove="Controllers\ValuesController.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\components\ls\ls.component.scss" />
+    <None Remove="ClientApp\src\app\components\ls\ls.component.spec.ts" />
+    <None Remove="ClientApp\src\app\components\ls\ls.component.html" />
+    <None Remove="ClientApp\src\app\components\ls\ls.component.ts" />
+  </ItemGroup>
 </Project>
