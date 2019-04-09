@@ -8,7 +8,6 @@ import { RouterModule } from '../../node_modules/@angular/router';
 import {PaginatorModule} from 'primeng/paginator';
 import { EventsComponent } from './components/events/events.component';
 import { VideosComponent } from './components/videos/videos.component';
-import { LsComponent } from './components/ls/ls.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { ContactComponent } from './components/contact/contact.component';
       HomeComponent,
       EventsComponent,
       VideosComponent,
-      LsComponent,
       ContactComponent,
          
   ],
