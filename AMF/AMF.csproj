@@ -8,6 +8,7 @@
     <Folder Include="wwwroot\" />
     <Folder Include="ClientApp\src\app\Interfaces\" />
     <Folder Include="ClientApp\src\app\Services\" />
+    <Folder Include="ClientApp\src\app\components\home\Images\" />
   </ItemGroup>
 
   <ItemGroup>
