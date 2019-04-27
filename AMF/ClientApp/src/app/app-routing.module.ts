@@ -6,10 +6,11 @@ import { VideosComponent } from './components/videos/videos.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
-{  path:'home',component: HomeComponent},
-    {path:'events',component: EventsComponent},
-        {path:'videos',component: VideosComponent},
-        {path:'contact',component: ContactComponent},
+    { path:'', redirectTo:'/home',pathMatch:'full'},
+    { path:'home',component: HomeComponent},
+    { path:'events',component: EventsComponent},
+    { path:'videos',component: VideosComponent},
+    { path:'contact',component: ContactComponent},
     ];
 
 @NgModule({
