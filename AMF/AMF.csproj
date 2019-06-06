@@ -28,4 +28,9 @@
     <None Remove="ClientApp\src\app\components\ls\ls.component.html" />
     <None Remove="ClientApp\src\app\components\ls\ls.component.ts" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AMF.Data\AMF.Data.csproj" />
+    <ProjectReference Include="..\AMF.Entities\AMF.Entities.csproj" />
+    <ProjectReference Include="..\AMF.Infrastructure\AMF.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>
