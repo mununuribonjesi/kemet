@@ -18,6 +18,8 @@ namespace AMF
 {
     public class Startup
     {
+        private string _connectionString = null;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,9 +29,12 @@ namespace AMF
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
+     
         {
+            _connectionString = Configuration["connectionString"];
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddEntityFrameworkNpgsql().AddDbContext<MyWebApiContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("MyWebApiConnection")));
+            services.AddEntityFrameworkNpgsql().AddDbContext<MyWebApiContext>(opt=>opt.UseNpgsql(_connectionString));
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
         }
 
