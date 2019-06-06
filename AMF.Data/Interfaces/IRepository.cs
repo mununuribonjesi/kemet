@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AMF.Data.Interfaces
 {
-    class Class1
+    public interface IRepository
     {
     }
 }
