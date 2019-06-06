@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-
 namespace AMF
 {
     public class Startup
@@ -28,7 +27,7 @@ namespace AMF
             _connectionString = Configuration["connectionString"];
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddEntityFrameworkNpgsql().AddDbContext<MyWebApiContext>(opt=>opt.UseNpgsql(_connectionString));
+            services.AddEntityFrameworkNpgsql().AddDbContext<WebApiContext>(opt=>opt.UseNpgsql(_connectionString));
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
         }
 

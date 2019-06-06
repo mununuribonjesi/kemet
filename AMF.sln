@@ -4,11 +4,11 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMF", "AMF\AMF.csproj", "{ED79594F-1A89-4017-900D-6D0E687D68E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{DB4BD97B-870A-4C32-9B0E-3D3D4BAD4E8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMF.Data", "Data\AMF.Data.csproj", "{DB4BD97B-870A-4C32-9B0E-3D3D4BAD4E8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{1D60BBAE-3E7F-452F-BAA3-153B34301623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMF.Entities", "Entities\AMF.Entities.csproj", "{1D60BBAE-3E7F-452F-BAA3-153B34301623}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{2F19E776-75BE-4701-9CD8-D9BBCF066283}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AMF.Infrastructure", "Infrastructure\AMF.Infrastructure.csproj", "{2F19E776-75BE-4701-9CD8-D9BBCF066283}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
