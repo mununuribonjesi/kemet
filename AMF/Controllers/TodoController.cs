@@ -15,7 +15,7 @@ namespace AMF.Controllers
 
         public TodoController(ITodoRepository _todoRepository)
             => 
-                TodoRepository = _todoRepository;
+            TodoRepository = _todoRepository;
 
         [HttpGet("id:guid")]
         public IActionResult GetTodo(Guid id)

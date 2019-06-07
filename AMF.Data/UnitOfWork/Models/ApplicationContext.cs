@@ -15,6 +15,5 @@ namespace AMF.Data.UnitOfWork.Models
 
         }
 
-        public virtual DbSet<Todo> Todo { get; set;}
     }
 }
