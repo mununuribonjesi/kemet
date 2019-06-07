@@ -12,8 +12,7 @@ namespace AMF.Data.UnitOfWork.Models.ModelConfigurations
         {
             builder.HasKey(prop => prop.Id);
 
-            builder.Property(prop => prop.CreateOn)
-                .HasField("TIMESTAMP(0)").IsRequired();
+            builder.Property(prop => prop.CreatedOn).HasColumnType("TIMESTAMP(0)").IsRequired();
 
             builder.Property(prop => prop.Body)
                 .HasMaxLength(1000);

@@ -14,7 +14,8 @@ namespace AMF.Controllers
         public readonly ITodoRepository TodoRepository;
 
         public TodoController(ITodoRepository _todoRepository)
-            => TodoRepository = _todoRepository;
+            => 
+                TodoRepository = _todoRepository;
 
         [HttpGet("id:guid")]
         public IActionResult GetTodo(Guid id)
@@ -38,7 +39,7 @@ namespace AMF.Controllers
             var todo = new Todo
             {
                 Body = "you are looking sad",
-                Title = "Do Laundry"
+                Title = "how are you today"
 
             };
             TodoRepository.Add(todo);
@@ -64,11 +65,7 @@ namespace AMF.Controllers
 
             TodoRepository.Update(todo);
 
-            return Ok("updated to do");
+            return Ok("to do updated");
         }
-
-
-
-
     }
 }

@@ -8,23 +8,33 @@ namespace AMF.Data.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
+
         private readonly ApplicationContext context;
 
         public Repository(ApplicationContext _context)
-            => context = _context;
+        {
+            context = _context;
+        }
 
         public void Add(T entity)
-            => context.Set<T>().Add(entity);
+        {
+            context.Set<T>().Add(entity);
+        }
 
         public IEnumerable<T> Get()
-            => context.Set<T>().ToList();
+        {
+            return context.Set<T>().ToList();
+        }
 
         public T GetById(Guid id)
-        => context.Set<T>().Find(id);
+        {
+            return context.Set<T>().Find(id);
+        }
 
         public void Remove(Guid id)
         {
             var type = context.Set<T>().Find(id);
+
             context.Remove(type);
         }
 
@@ -34,6 +44,8 @@ namespace AMF.Data.Repositories
         }
 
         public void Update(T entity)
-            => context.Set<T>().Attach(entity);
+        {
+            context.Set<T>().Attach(entity);
+        }
     }
 }

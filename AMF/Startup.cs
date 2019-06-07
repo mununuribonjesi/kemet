@@ -26,7 +26,7 @@ namespace AMF
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("MyWebApiConnection")));
+            services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<ITodoRepository, TodoRepository>();
@@ -41,7 +41,7 @@ namespace AMF
               .AllowAnyOrigin()
               .Build());
             app.UseSpaStaticFiles();
-
+            app.UseDeveloperExceptionPage();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

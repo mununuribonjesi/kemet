@@ -5,6 +5,7 @@ using AMF.Data.UnitOfWork.Models;
 
 namespace AMF.Data.Interfaces
 {
-    public interface ITodoRepository: IRepository<Todo>
+    public interface 
+        ITodoRepository: IRepository<Todo>
     { }
 }

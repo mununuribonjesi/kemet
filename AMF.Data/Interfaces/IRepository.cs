@@ -15,5 +15,6 @@ namespace AMF.Data.Interfaces
         void Save();
 
         void Update(T entity);
+
     }
 }

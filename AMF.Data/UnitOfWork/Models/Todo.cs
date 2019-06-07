@@ -10,14 +10,14 @@ namespace AMF.Data.UnitOfWork.Models
         {
 
             Id = new Guid();
-            CreateOn = DateTime.Now;
+            CreatedOn = DateTime.Now;
             IsCompleted = false;
 
         }
 
         public Guid Id {get; set;}
 
-        public DateTime CreateOn { get; set;}
+        public DateTime CreatedOn { get; set;}
 
         public string Title { get; set; }
 
