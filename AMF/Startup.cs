@@ -1,7 +1,6 @@
 ﻿using System;
 using AMF.Data.Interfaces;
 using AMF.Data.Repositories;
-using AMF.Data.UnitOfWork.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +28,6 @@ namespace AMF
             services.AddEntityFrameworkNpgsql().AddDbContext<ApplicationContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped<ITodoRepository, TodoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
