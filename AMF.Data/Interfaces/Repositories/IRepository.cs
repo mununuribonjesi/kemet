@@ -1,20 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
-namespace AMF.Data.Interfaces
+namespace AMF.Data.Interfaces.Repositories
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<TEntity> where TEntity : class
     {
-        void Add(T entity);
-        T GetById(Guid id);
+        TEntity Get(int id);
+        IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
 
-        IEnumerable<T> Get();
+        // This method was not in the videos, but I thought it would be useful to add.
+        TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
 
-        void Remove(Guid id);
+        void Add(TEntity entity);
+        void AddRange(IEnumerable<TEntity> entities);
 
-        void Save();
-
-        void Update(T entity);
-
+        void Remove(TEntity entity);
+        void RemoveRange(IEnumerable<TEntity> entities);
     }
 }

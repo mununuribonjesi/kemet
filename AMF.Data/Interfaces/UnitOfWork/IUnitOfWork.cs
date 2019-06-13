@@ -6,5 +6,6 @@ namespace AMF.Data.Interfaces.UnitOfWork
 {
     public interface IUnitOfWork
     {
+        int Complete();
     }
 }
