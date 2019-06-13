@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using AMF.Entities.DTOs;
 
 namespace AMF.Entities.Models
 {
@@ -14,6 +15,8 @@ namespace AMF.Entities.Models
 
 
         }
+
+        public virtual DbSet<Customer> Customers { get; set; }
 
     }
 }
