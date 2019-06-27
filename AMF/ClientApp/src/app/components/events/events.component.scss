@@ -1,0 +1,46 @@
+.date-row {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.date-row span:nth-child(1) {
+  margin-top: -13px;
+  margin-bottom: -6px;
+  border-right: 1px solid White;
+  padding-right: 10px;
+  vertical-align: middle;
+  height: 26px;
+  padding-top: 6px;
+}
+
+.date-row span:nth-child(2) {
+  padding-left: 10px;
+  font-family: helveticaneue-light,Helvetica,Arial,serif;
+  font-size: 12px;
+  vertical-align: text-top;
+}
+
+
+.date-row .h3 {
+  font-family: helveticaneue-light,Helvetica,Arial,serif;
+  font-size: 13px;
+  margin-top: 4px;
+  color: white;
+}
+
+.date-row .ticket-button {
+  border-top: 1px solid #888;
+  border-left: 1px solid #888;
+  background-color: #AA3939;
+  color: #fff;
+  padding: 4px 20px 4px 10px;
+  border-radius: 4px;
+  width: 125px;
+  margin: 0 auto;
+  margin-top: 30px;
+  float: left;
+}
