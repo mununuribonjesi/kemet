@@ -11,6 +11,7 @@
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
+
         }
       },
       "architect": {
@@ -26,15 +27,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [ 
               "src/styles.scss",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+
               
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
             "./node_modules/bootstrap/dist/js/bootstrap.min.js"
-
 
             ]
           },

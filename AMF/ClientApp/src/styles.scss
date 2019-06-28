@@ -1,4 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
 
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+.jumbotron {
+  color: black !important;
+  padding: 0px !important;
+  border-bottom: white solid 5px;
+  border-top: white solid 5px;
+
+}
+
+.navbar-toggler-icon {
+  color: white !important;
+}
+
+h1 {
+  color: black !important;
+}
+
+h2 {
+  color: white !important;
+}
+
+
+
+body {
+  background-color: black !important;
+  min-height: 100% !important;
+}
+
+div {
+  color: whitesmoke;
+}
+
+.category-box {
+  text-align: center;
+  height: 430px;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+img {
+  height: 450px;
+  top: 20px;
+}
 
