@@ -1,7 +1,7 @@
 .masthead {
   height: 60vh;
   min-height: 300px;
-  /*background-image: url('Images/haze1.jpg');*/
+  background-image: url('Images/sza.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,31 +11,31 @@
 
 
 .banner-links-container {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .w-inline-block {
-    max-width: 100%;
-    display: inline-block;
+  max-width: 100%;
+  display: inline-block;
 }
 
 .button-white {
-    margin: 5px 5px 21px;
-    padding: 7px 12px;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 auto;
-    -ms-flex: 0 auto;
-    flex: 0 auto;
-    border: 1px solid #fff;
-    background-color: transparent;
-    font-family: 'Open Sans', sans-serif;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
+  margin: 5px 5px 21px;
+  padding: 7px 12px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .button-white:hover {
@@ -45,3 +45,295 @@
 
 $body-bg: transparent;
 
+
+@charset "UTF-8";
+/* icomoon */
+::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+:-moz-placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+::-moz-placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+:-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 1000px #000 inset;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-text-fill-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.firefox #secondForm .mlist-field input {
+  text-indent: 4px;
+}
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect
+.mlist-wrapper
+form
+fieldset
+.firstFormOverll {
+  /* max-width: 680px; */
+  margin: 50px auto 0;
+}
+
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect
+.mlist-wrapper
+form
+fieldset
+.firstform
+label.error {
+  position: absolute;
+  top: -16px;
+  width: 100%;
+  left: 0;
+}
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect
+.mlist-wrapper
+form
+fieldset
+.mlist-field.firstform
+.mlist-submit {
+  padding-top: 0;
+}
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect
+.mlist-wrapper
+form
+fieldset
+.mlist-header {
+  width: 100%;
+  display: block;
+  /* vertical-align: middle; */
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect
+.mlist-wrapper
+form
+fieldset
+.mlist-header
+.emailaddress {
+  font-size: 16.03px;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.35;
+  text-align: left;
+  letter-spacing: 0.75px;
+  max-width: 355px;
+  padding-bottom: 16px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: -25px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 450;
+  font-style: normal;
+}
+
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect
+.mlist-wrapper
+form
+fieldset
+.firstform {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+
+.mlist-outer-wrapper.embedded-inline-list.country-detect
+.mlist-wrapper
+form
+fieldset
+.mlist-field.email {
+  width: 100%;
+}
+
+
+
+
+.mlist-wrapper
+form
+fieldset
+.mlist-field
+input#email {
+  width: 100%;
+  height: 30px;
+  line-height: 1.4;
+  border: navajowhite;
+  border-bottom: 2px solid #AA3939;
+  outline: none;
+  border-radius: 0px;
+  background: #000;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: none;
+  padding: 0px;
+  padding-left: 0;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  margin-top: 0;
+  font-family: futura-pt, sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  padding-right: 50px;
+}
+
+
+.mlist-wrapper
+form
+fieldset
+.dummySubmit {
+  position: absolute;
+  top: 0;
+  right: -47px;
+  padding-top: 0;
+  width: 118px;
+  padding-top: 0;
+  border-bottom: blue;
+}
+
+.mlist-wrapper
+form
+fieldset
+.dummySubmit
+a.icon-go-arrow.arrow-link {
+  font-size: 14px;
+  height: 30px;
+  display: block;
+  line-height: 33px;
+}
+
+@media only screen and (max-width: 767px) {
+  .mlist-outer-wrapper.embedded-inline-list.country-detect
+  .mlist-wrapper
+  form
+  fieldset
+  .mlist-field
+  input#email {
+    text-align: left;
+  }
+
+  .mlist-wrapper
+  form
+  fieldset
+  .mlist-header {
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    max-width: 220px;
+  }
+
+
+
+  .mlist-outer-wrapper.embedded-inline-list.country-detect
+  .mlist-wrapper
+  form
+  fieldset
+  .mlist-submit
+  input.submit {
+    font-size: 17px !important;
+  }
+
+  .mlist-wrapper
+  form
+  fieldset
+  .firstFormOverll {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .mlist-wrapper
+  form
+  fieldset
+  .mlist-field
+  input#email {
+    text-align: left;
+  }
+
+
+  .mlist-wrapper
+  form
+  fieldset
+  .mlist-header {
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    max-width: 220px;
+  }
+
+
+  .mlist-wrapper
+  form
+  fieldset
+  .mlist-submit
+  input.submit {
+    font-size: 17px !important;
+  }
+}
+
+.mlist-wrapper
+form
+fieldset
+.mlist-submit {
+  display: none;
+  vertical-align: top;
+  padding-top: 15px;
+  width: 150px;
+  margin: 0 auto;
+}
