@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
     export class HomeComponent implements OnInit {
 
-
+  isMailLst: boolean = false;
     
   
   constructor() { }
@@ -20,6 +20,19 @@ import { Component, OnInit } from '@angular/core';
          
   
     }
+
+
+  isMailing() {
+    if (!this.isMailLst) {
+
+      this.isMailLst = false;
+    }
+    else {
+
+      this.isMailLst = true;
+    }
+  }
+
 
 
 }

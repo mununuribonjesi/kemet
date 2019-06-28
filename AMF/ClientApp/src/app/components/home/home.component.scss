@@ -1,7 +1,7 @@
 .masthead {
   height: 60vh;
   min-height: 300px;
-  background-image: url('Images/sza.jpg');
+  /*background-image: url('Images/newyork.jpg');*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -254,10 +254,10 @@ form
 fieldset
 .dummySubmit
 a.icon-go-arrow.arrow-link {
-  font-size: 14px;
+  font-size: 22px;
   height: 30px;
   display: block;
-  line-height: 33px;
+  line-height: 3px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -296,16 +296,8 @@ a.icon-go-arrow.arrow-link {
   .firstFormOverll {
     max-width: 90%;
   }
-}
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
-  .mlist-wrapper
-  form
-  fieldset
-  .mlist-field
-  input#email {
-    text-align: left;
-  }
+
 
 
   .mlist-wrapper
@@ -337,3 +329,290 @@ fieldset
   width: 150px;
   margin: 0 auto;
 }
+
+.header-font {
+  font-size: 25px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.arrow-link{
+  cursor:pointer;
+
+}
+.arrow-link:hover {
+  -webkit-animation: bounceRight 2s infinite;
+  animation: bounceRight 2s infinite;
+}
+
+@-webkit-keyframes bounceRight {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  40% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+
+
+
+
+
+
+
+.mlist-field
+select {
+  width: 100%;
+  height: 34px;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  padding-left: 15px;
+  line-height: 1;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  box-sizing: border-box;
+  text-transform: none;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  background: #000;
+  border: 1px solid #AA3939;
+}
+
+.mlist-field
+input {
+  width: 100%;
+  height: 34px;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  padding-left: 15px;
+  line-height: 1;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  box-sizing: border-box;
+  text-transform: none;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 450;
+  font-style: normal;
+  background: #000;
+  border: 1px solid #AA3939;
+}
+
+.mlist-field
+label {
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  padding-bottom: 10px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+
+.mlist-field {
+  width: 100%;
+  display: block;
+  padding-bottom: 10px;
+  font-size: 0px;
+}
+
+
+
+div#thankyoublock-innerwrapper {
+
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  /* letter-spacing: 1px; */
+}
+
+.mlist-field
+select#dobMonth {
+  width: 48%;
+  margin-right: 4%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.mlist-field
+select#dobDay {
+  width: 48%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mlist-checks {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-right: 8px;
+  clear: both;
+  margin: 10px 0 20px;
+}
+.artist-inline {
+  display: inline-block;
+}
+
+
+.thankswelcome-msg {
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 8px 0px 16px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+#thankyoublock-innerwrapper
+.secondFormCloseWrap {
+  text-align: right;
+}
+
+.secondFormCloseWrap
+a {
+  font-size: 26px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+.thankyou-message.embed {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0px 20px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #ffffff;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@keyframes bounceRight {
+  0%, 20%, 50%, 80%, 100% {
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  20% {
+    -ms-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+
+
+}
+
+
+.mlist-submit-new
+input.submit {
+  outline: none;
+  border-radius: 0px;
+  letter-spacing: 2.5px;
+  font-size: 16.14px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 122px;
+  height: 38px;
+  line-height: 1;
+  padding: 0;
+  background-color: #AA3939;
+  border: #DF0000;
+  color: rgb(255, 255, 255);
+  margin-left: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: futura-pt-bold, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.mlist-checks {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-right: 8px;
+  clear: both;
+  margin: 10px 0 20px;
+}
+
+.mlist-outer-wrapper [type="checkbox"]:not(:checked),
+.mlist-outer-wrapper [type="checkbox"]:checked {
+  cursor: pointer;
+  height: 24px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  z-index: 10;
+  border: 1px solid rgb(33, 66, 229);
+  margin: 0;
+}
+
+.mlist-outer-wrapper [type="checkbox"]:not(:checked) + label,
+.mlist-outer-wrapper [type="checkbox"]:checked + label {
+  cursor: pointer;
+  padding-left: 31px;
+  /* padding-top: 6px; */
+  position: relative;
+}
+
+.mlist-outer-wrapper input[type="checkbox"]:not(:checked) + label::before,
+.mlist-outer-wrapper input[type="checkbox"]:checked + label::before {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #AA3939;
+  border-radius: 0;
+  content: "";
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+
