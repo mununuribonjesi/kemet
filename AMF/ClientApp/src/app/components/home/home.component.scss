@@ -9,6 +9,11 @@
   margin-top: -32px;
 }
 
+a{
+
+ cursor:pointer;
+}
+
 
 .banner-links-container {
   padding-top: 10px;
@@ -457,7 +462,7 @@ div#thankyoublock-innerwrapper {
 
 .mlist-field
 select#dobMonth {
-  width: 48%;
+  width: 31%;
   margin-right: 4%;
   display: inline-block;
   vertical-align: middle;
@@ -466,7 +471,15 @@ select#dobMonth {
 
 .mlist-field
 select#dobDay {
-  width: 48%;
+  width: 30%;
+  margin-right: 4%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mlist-field
+select#dobYear {
+  width: 30%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -551,6 +564,7 @@ input.submit {
   text-align: center;
   cursor: pointer;
   -webkit-appearance: none;
+  margin-bottom: 20px;
   width: 122px;
   height: 38px;
   line-height: 1;
@@ -580,39 +594,7 @@ input.submit {
   margin: 10px 0 20px;
 }
 
-.mlist-outer-wrapper [type="checkbox"]:not(:checked),
-.mlist-outer-wrapper [type="checkbox"]:checked {
-  cursor: pointer;
-  height: 24px;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 20px;
-  z-index: 10;
-  border: 1px solid rgb(33, 66, 229);
-  margin: 0;
+#secondForm {
+  border: #AA3939 solid 5px;
+  margin-top:30px;
 }
-
-.mlist-outer-wrapper [type="checkbox"]:not(:checked) + label,
-.mlist-outer-wrapper [type="checkbox"]:checked + label {
-  cursor: pointer;
-  padding-left: 31px;
-  /* padding-top: 6px; */
-  position: relative;
-}
-
-.mlist-outer-wrapper input[type="checkbox"]:not(:checked) + label::before,
-.mlist-outer-wrapper input[type="checkbox"]:checked + label::before {
-  background: transparent none repeat scroll 0 0;
-  border: 1px solid #AA3939;
-  border-radius: 0;
-  content: "";
-  height: 20px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 20px;
-}
-
-

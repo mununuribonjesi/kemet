@@ -10,6 +10,8 @@ import { EventsComponent } from './components/events/events.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { ContactComponent } from './components/contact/contact.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
