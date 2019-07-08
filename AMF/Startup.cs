@@ -1,8 +1,9 @@
 ﻿using System;
-using AMF.Data.Interfaces;
 using AMF.Data.Interfaces.Repositories;
 using AMF.Data.Repositories;
 using AMF.Entities.Models;
+using AMF.Infrastructure.Interfaces;
+using AMF.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,8 @@ namespace AMF
 {
     public class Startup
     {
+
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -30,6 +33,8 @@ namespace AMF
             services.AddEntityFrameworkNpgsql().AddDbContext<DatabaseContext>(opt => opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddSingleton<IMailingListService, MailingListService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,6 +3,7 @@ using AMF.Entities.DTOs;
 using AMF.Entities.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AMF.Data.Repositories
@@ -18,6 +19,12 @@ namespace AMF.Data.Repositories
        public new void Add(MailingList Mail)
         {
             Context.Set<MailingList>().Add(Mail);
+        }
+
+        public new IEnumerable<MailingList> GetAll()
+        {
+
+            return Context.Set<MailingList>().ToList();
         }
     }
 }

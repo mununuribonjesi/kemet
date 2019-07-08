@@ -5,9 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\app\services\" />
     <Folder Include="wwwroot\" />
     <Folder Include="ClientApp\src\app\Interfaces\" />
-    <Folder Include="ClientApp\src\app\Services\" />
     <Folder Include="ClientApp\src\app\components\home\Images\" />
   </ItemGroup>
 
@@ -22,10 +22,14 @@
     <None Remove="ClientApp\src\app\components\ls\ls.component.spec.ts" />
     <None Remove="ClientApp\src\app\components\ls\ls.component.html" />
     <None Remove="ClientApp\src\app\components\ls\ls.component.ts" />
+    <None Remove="ClientApp\src\app\services\MailingListService.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AMF.Data\AMF.Data.csproj" />
     <ProjectReference Include="..\AMF.Entities\AMF.Entities.csproj" />
     <ProjectReference Include="..\AMF.Infrastructure\AMF.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\services\MailingListService.ts" />
   </ItemGroup>
 </Project>

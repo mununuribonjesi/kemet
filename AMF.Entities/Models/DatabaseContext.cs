@@ -11,8 +11,6 @@ namespace AMF.Entities.Models
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
         :base(options)
         {
-
-
         }
 
         public virtual DbSet<MailingList> MailingList { get; set; }

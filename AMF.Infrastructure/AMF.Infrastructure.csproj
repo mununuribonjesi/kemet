@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\AMF.Data\AMF.Data.csproj" />
+    <ProjectReference Include="..\AMF.Entities\AMF.Entities.csproj" />
   </ItemGroup>
 
 </Project>

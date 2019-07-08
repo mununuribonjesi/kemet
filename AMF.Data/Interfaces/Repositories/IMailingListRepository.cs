@@ -8,5 +8,6 @@ namespace AMF.Data.Interfaces.Repositories
     public interface IMailingListRepository: IRepository<MailingList>
     {
         new void Add(MailingList Mail);
+        new IEnumerable<MailingList> GetAll();
     }
 }
