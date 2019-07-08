@@ -8,7 +8,6 @@ namespace AMF.Entities.Models
 {
     public class DatabaseContext: DbContext
     {
-
         public DatabaseContext(DbContextOptions<DatabaseContext> options)
         :base(options)
         {
@@ -16,7 +15,6 @@ namespace AMF.Entities.Models
 
         }
 
-        public virtual DbSet<Customer> Customers { get; set; }
-
+        public virtual DbSet<MailingList> MailingList { get; set; }
     }
 }
