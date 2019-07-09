@@ -13,6 +13,8 @@ namespace AMF.Entities.Models
         {
         }
 
-        public virtual DbSet<Subscribers> MailingList { get; set; }
+        public virtual DbSet<Subscribers> Subscribers { get; set; }
+        public virtual DbSet<Countries> Countries { get; set; }
+        public virtual DbSet<SubscribedEmails> SubscribedEmails { get; set; }
     }
 }

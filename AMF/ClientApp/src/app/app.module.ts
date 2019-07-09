@@ -9,6 +9,9 @@ import {PaginatorModule} from 'primeng/paginator';
 import { EventsComponent } from './components/events/events.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { MailingListService } from './services/MailingListService';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 @NgModule({
   declarations: [
@@ -20,12 +23,13 @@ import { ContactComponent } from './components/contact/contact.component';
          
   ],
   imports: [
-    BrowserModule,
+      BrowserModule,
       AppRoutingModule,
       RouterModule,
-      PaginatorModule
+      PaginatorModule,
+      HttpClientModule
   ],
-  providers: [],
+  providers: [MailingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

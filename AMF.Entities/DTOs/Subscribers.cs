@@ -14,6 +14,7 @@ namespace AMF.Entities.DTOs
         public DateTime BirthDate { get; set; }
         public Guid CountryID { get; set; }
         public Guid EmailID { get; set; }
+        public String City { get; set; }
 
     }
 }

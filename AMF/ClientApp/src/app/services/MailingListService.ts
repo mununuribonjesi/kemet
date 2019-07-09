@@ -1,6 +1,7 @@
-import { MailingList } from "../dtos/MailingList";
+
 import { Injectable } from "@angular/core";
-import { HttpClient } from "selenium-webdriver/http";
+import { HttpClient } from '@angular/common/http';
+import { Observable } from "rxjs";
 
 @Injectable()
 export class MailingListService
@@ -9,22 +10,12 @@ export class MailingListService
 
 
   }
-  public AddMail(emailAddress: string, firstName: string, lastName: string, dobDay: number, dobMonth: number, dobYear: number): void {
 
-    let subscription: MailingList = new MailingList();
+  getSubscriber(): Observable<any> {
 
-    subscription.new();
-
-    subscription.emailAddress = emailAddress;
-    subscription.firstName = firstName;
-    subscription.lastName = lastName;
-    subscription.dobDay = dobDay;
-    subscription.dobMonth = dobMonth;
-    subscription.dobYear = dobYear;
-
-   
-
+    return this.httpClient.get("//localhost:47294/api/mailingList/mailList")
 
   }
 
-}
+  }
+
