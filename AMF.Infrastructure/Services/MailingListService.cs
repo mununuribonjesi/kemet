@@ -17,12 +17,12 @@ namespace AMF.Infrastructure.Services
             _mlr = mlr;
         }
 
-        public void Add(MailingList Mail)
+        public void Add(Subscribers Mail)
         {
             _mlr.Add(Mail);
         }
 
-        public IEnumerable<MailingList> GetMailingList()
+        public IEnumerable<Subscribers> GetMailingList()
         {
             return _mlr.GetAll();
         }

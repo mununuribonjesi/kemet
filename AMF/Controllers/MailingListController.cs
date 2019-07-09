@@ -18,7 +18,7 @@ namespace AMF.Controllers
         }
 
         [HttpPost("addMailList")]
-        public void AddMailList([FromBody] MailingList Mail)
+        public void AddMailList([FromBody] Subscribers Mail)
         {
             _mailingListService.Add(Mail);
         }

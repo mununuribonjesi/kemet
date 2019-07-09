@@ -8,22 +8,22 @@ using System.Text;
 
 namespace AMF.Data.Repositories
 {
-    public class MailingListRepository : Repository<MailingList>, IMailingListRepository
+    public class MailingListRepository : Repository<Subscribers>, IMailingListRepository
     {
 
         public MailingListRepository(DatabaseContext context)
       : base(context)
         { }
 
-       public new void Add(MailingList Mail)
+       public new void Add(Subscribers Mail)
         {
-            Context.Set<MailingList>().Add(Mail);
+            Context.Set<Subscribers>().Add(Mail);
         }
 
-        public new IEnumerable<MailingList> GetAll()
+        public new IEnumerable<Subscribers> GetAll()
         {
 
-            return Context.Set<MailingList>().ToList();
+            return Context.Set<Subscribers>().ToList();
         }
     }
 }

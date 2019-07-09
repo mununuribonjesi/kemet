@@ -7,7 +7,7 @@ namespace AMF.Infrastructure.Interfaces
 {
     public interface IMailingListService
     {
-      void Add(MailingList Mail);
-      IEnumerable<MailingList> GetMailingList();
+      void Add(Subscribers Mail);
+      IEnumerable<Subscribers> GetMailingList();
     }
 }

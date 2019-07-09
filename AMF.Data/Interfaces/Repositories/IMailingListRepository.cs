@@ -5,9 +5,9 @@ using System.Text;
 
 namespace AMF.Data.Interfaces.Repositories
 {
-    public interface IMailingListRepository: IRepository<MailingList>
+    public interface IMailingListRepository: IRepository<Subscribers>
     {
-        new void Add(MailingList Mail);
-        new IEnumerable<MailingList> GetAll();
+        new void Add(Subscribers Mail);
+        new IEnumerable<Subscribers> GetAll();
     }
 }
