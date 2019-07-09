@@ -12,7 +12,7 @@ namespace AMF.Controllers
         private readonly IMailingListService _mailingListService;
 
 
-        public MailingListController(MailingListService mailingListService)
+        public MailingListController(IMailingListService mailingListService)
         {
             _mailingListService = mailingListService;
         }
@@ -30,7 +30,7 @@ namespace AMF.Controllers
         {
             try
             {
-                return Ok(_mailingListService);
+                return Ok(_mailingListService.GetMailingList());
             }
             catch (Exception exception)
             {
