@@ -1,10 +1,7 @@
 ﻿using AMF.Data.Interfaces.Repositories;
-using AMF.Data.Repositories;
 using AMF.Entities.DTOs;
 using AMF.Infrastructure.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AMF.Infrastructure.Services
 {
