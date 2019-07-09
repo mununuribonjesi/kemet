@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AMF.Data.Interfaces;
 using AMF.Entities.DTOs;
+using AMF.Infrastructure.Interfaces;
 using AMF.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,7 +9,7 @@ namespace AMF.Controllers
     [Route("api/[controller]")]
     public class MailingListController : Controller
     {
-        private readonly MailingListService _mailingListService;
+        private readonly IMailingListService _mailingListService;
 
 
         public MailingListController(MailingListService mailingListService)

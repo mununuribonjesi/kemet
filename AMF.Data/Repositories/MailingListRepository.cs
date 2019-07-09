@@ -10,7 +10,6 @@ namespace AMF.Data.Repositories
 {
     public class MailingListRepository : Repository<MailingList>, IMailingListRepository
     {
-        public MailingList Mail;
 
         public MailingListRepository(DatabaseContext context)
       : base(context)
