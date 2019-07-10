@@ -3,15 +3,15 @@ import { MailingListService } from 'src/app/services/MailingListService';
 import { subscribers } from 'src/app/dtos/Subscribers';
 import { countries } from 'src/app/dtos/Countries';
 import { Guid } from "guid-typescript";
-import { create } from 'domain';
 import { subscribedEmails } from 'src/app/dtos/subscribedEmails';
-
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
 
   isMailLst: boolean = false;
@@ -35,7 +35,6 @@ export class HomeComponent implements OnInit {
   objSubscribers: subscribers;
   objSubscribedEmails = subscribedEmails;
 
-
   constructor(private _mailingListService: MailingListService) {
 
   }
@@ -45,16 +44,13 @@ export class HomeComponent implements OnInit {
     this.dayList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
     this.yearList = this.getRangeOfYears();
     this.genderList = ["Unspecified", "Male", "Female"];
-    
+
 
     this._mailingListService.getCountries().subscribe(
       data => {
         this.lstCountries = data;
-      }
-    );
-
+      });
   }
-
 
   joinMailing() {
     this.isMailLst = !this.isMailLst;
@@ -64,6 +60,7 @@ export class HomeComponent implements OnInit {
     var currentYear = new Date().getFullYear();
     var yearRange = [];
     var i = 0;
+
     while (i <= 120) {
       yearRange.push(currentYear - i)
       i++
@@ -71,13 +68,9 @@ export class HomeComponent implements OnInit {
     return yearRange;
   }
 
-  subscribe() {
+  getSubscribers(emailID: Guid, subscriptionID: Guid) {
 
     var subscription = new subscribers();
-    var subscriptionEmail = new subscribedEmails();
-
-    var emailID = Guid.create();
-    var subscriptionID = Guid.create();
 
     subscription.birthDate = new Date(this.year, this.month, this.day);
     subscription.city = this.city;
@@ -89,22 +82,36 @@ export class HomeComponent implements OnInit {
     subscription.PostCode = this.postCode;
     subscription.subscriptionID = subscriptionID.toString();
 
+    return subscription;
+  }
+
+  getSubscribedEmails(emailID: Guid) {
+
+    var subscriptionEmail = new subscribedEmails();
+
     subscriptionEmail.email = this.email;
     subscriptionEmail.emailID = emailID.toString();
 
-    this._mailingListService.postSubscriber(subscription).subscribe(
+    return subscriptionEmail
+  }
+
+
+  subscribe() {
+
+    var emailID = Guid.create();
+    var subscriptionID = Guid.create();
+
+    this._mailingListService.postSubscriber(this.getSubscribers(emailID, subscriptionID)).subscribe(
       data => {
         this.objSubscribers = data;
       }
     );
 
-
-    this._mailingListService.postEmail(subscriptionEmail).subscribe(
+    this._mailingListService.postEmail(this.getSubscribedEmails(emailID)).subscribe(
       data => {
         this.objSubscribedEmails = data;
       }
     );
   }
-
-  }
+}
 
