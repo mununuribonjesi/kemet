@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   lstSubscribers: subscribers[];
   lstCountries: countries[];
   firstName: string;
-  LastName: string;
+  lastName: string;
   gender: string;
   day: number;
   month: number;
@@ -85,7 +85,7 @@ export class HomeComponent implements OnInit {
     subscription.emailID = emailID.toString();
     subscription.firstName = this.firstName;
     subscription.gender = this.gender;
-    subscription.lastName = this.LastName;
+    subscription.lastName = this.lastName;
     subscription.PostCode = this.postCode;
     subscription.subscriptionID = subscriptionID.toString();
 
