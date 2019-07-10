@@ -1,10 +1,22 @@
-﻿using System;
+﻿using AMF.Data.Interfaces.Repositories;
+using AMF.Entities.DTOs;
+using AMF.Infrastructure.Interfaces;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AMF.Infrastructure.Services
 {
-    class CountriesService
+    public class CountriesService :ICountriesService
     {
+        private readonly ICountriesRepository _cr;
+
+        public CountriesService(ICountriesRepository cr)
+        {
+            _cr = cr;
+        }
+
+        public IEnumerable<Countries> GetCountries()
+        {
+            return _cr.GetAll();
+        }
     }
 }

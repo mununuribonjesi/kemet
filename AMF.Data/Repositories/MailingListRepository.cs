@@ -15,11 +15,7 @@ namespace AMF.Data.Repositories
        public new void Add(Subscribers Mail)
         {
             Context.Set<Subscribers>().Add(Mail);
-        }
-
-        public new IEnumerable<Subscribers> GetAll()
-        {
-            return Context.Set<Subscribers>().ToList();
+            Context.SaveChanges();
         }
     }
 }

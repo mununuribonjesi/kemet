@@ -22,6 +22,8 @@
     <None Remove="ClientApp\src\app\components\ls\ls.component.spec.ts" />
     <None Remove="ClientApp\src\app\components\ls\ls.component.html" />
     <None Remove="ClientApp\src\app\components\ls\ls.component.ts" />
+    <None Remove="ClientApp\src\app\dtos\Countries.ts" />
+    <None Remove="ClientApp\src\app\dtos\subscribedEmails.ts" />
     <None Remove="ClientApp\src\app\services\MailingListService.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -30,6 +32,8 @@
     <ProjectReference Include="..\AMF.Infrastructure\AMF.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\dtos\countries.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\dtos\subscribedEmails.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\MailingListService.ts" />
   </ItemGroup>
 </Project>

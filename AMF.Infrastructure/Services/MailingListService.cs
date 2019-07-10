@@ -18,10 +18,5 @@ namespace AMF.Infrastructure.Services
         {
             _mlr.Add(Mail);
         }
-
-        public IEnumerable<Subscribers> GetMailingList()
-        {
-            return _mlr.GetAll();
-        }
     }
 }

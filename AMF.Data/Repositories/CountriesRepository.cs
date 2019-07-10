@@ -1,6 +1,8 @@
 ﻿using AMF.Data.Interfaces.Repositories;
 using AMF.Entities.DTOs;
 using AMF.Entities.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AMF.Data.Repositories
 {
@@ -10,5 +12,9 @@ namespace AMF.Data.Repositories
         :base(context)
         { }
 
+        public new IEnumerable<Countries> GetAll()
+        {
+            return Context.Set<Countries>().ToList();
+        }
     }
 }

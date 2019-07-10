@@ -9,6 +9,11 @@ namespace AMF.Data.Repositories
         public EmailRepository(DatabaseContext context)
          : base(context)
         { }
-    
+
+        public new void Add(SubscribedEmails Mail)
+        {
+            Context.Set<SubscribedEmails>().Add(Mail);
+            Context.SaveChanges();
+        }
     }
 }

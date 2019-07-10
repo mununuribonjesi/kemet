@@ -7,8 +7,6 @@ namespace AMF.Data.Interfaces.Repositories
 {
     public interface ICountriesRepository:IRepository<Countries>
     {
-
-
-
+        new IEnumerable<Countries> GetAll();
     }
 }

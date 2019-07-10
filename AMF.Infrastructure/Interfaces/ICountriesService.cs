@@ -1,13 +1,11 @@
 ﻿using AMF.Entities.DTOs;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AMF.Infrastructure.Interfaces
 {
-    public interface IMailingListService
+    public interface ICountriesService
     {
-      void Add(Subscribers Mail);
-
+        IEnumerable<Countries> GetCountries();
     }
 }

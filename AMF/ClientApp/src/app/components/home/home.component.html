@@ -7,29 +7,10 @@
   </div>
 </div>
 
-<table>
-  <tr *ngFor="let sub of lstSubscribers">
-    {{sub.subscriptionID}}
-    {{sub.firstName}}
-    {{sub.lastName}}
-    {{sub.gender}}
-    {{sub.birthDate}}
-    {{sub.countryID}}
-    {{sub.emailID}}
-    {{sub.city}}
-  </tr>
-
-
-
-</table>
-
 <header class="masthead">
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-sm-12 text-center">
-
-
-
 
         <!--<h1 style="color: white !important; font-family:'Open Sans', sans-serif;" class="font-weight-light">Cashier</h1>
         <div class="banner-links-container">
@@ -51,14 +32,11 @@
                       </div>
                       <div class="firstform">
                         <div class="mlist-field email">
-                          <input id="email" name="email" tabindex="-1" type="email" placeholder="Email Address" onfocus="this.placeholder=''" class="m-required m-email">
+                          <input [(ngModel)]="email" id="email" name="email" tabindex="-1" type="email" placeholder="Email Address" onfocus="this.placeholder=''" class="m-required m-email">
                         </div>
                         <div class="dummySubmit">
                           <a class="icon-go-arrow arrow-link" (click)='joinMailing();'><i class="fas fa-arrow-right"></i></a>
 
-                        </div>
-                        <div class="mlist-submit">
-                          <input class="submit" type="submit" value="SUBSCRIBE">
                         </div>
                       </div>
                     </div>
@@ -75,13 +53,19 @@
                     <div id="secondary-list-values" class="secondary-list-values">
                       <div class="mlist-field postalcode">
                         <label for="postalcode">Postal Code</label>
-                        <input id="postalcode" name="postalcode" type="text" autofocus="">
+                        <input [(ngModel)]="postCode" id="postalcode" name="postalcode" type="text" autofocus="">
                       </div>
+
+                      <div class="mlist-field postalcode">
+                        <label for="postalcode">City</label>
+                        <input [(ngModel)]="city" id="postalcode" name="city" type="text" autofocus="">
+                      </div>
+
                       <div class="mlist-field country">
                         <label for="country"> Country </label>
-                        <select id="country" name="country" class="m-required valid">
+                        <select [(ngModel)]="country" id="country" name="country" class="m-required valid">
                           <option value="">Select a country</option>
-                          <option *ngFor="let country of countryList" [ngValue]="country">{{country}}</option>
+                          <option *ngFor="let country of lstCountries" [ngValue]="country.countryID">{{country.country}}</option>
                         </select>
                       </div>
 
@@ -89,7 +73,7 @@
 
                         <label for="firstname">First name</label>
 
-                        <input id="firstname" name="firstname" type="text">
+                        <input [(ngModel)]="firstName" id="firstname" name="firstname" type="text">
 
                       </div>
 
@@ -97,33 +81,33 @@
 
                         <label for="firstname">Last name</label>
 
-                        <input id="firstname" name="firstname" type="text">
+                        <input [(ngModel)]="lastName" id="firstname" name="firstname" type="text">
 
                       </div>
 
                       <div class="mlist-field">
                         <label for="birthday">Gender</label>
-                        <select name="dobDay" id="sex">
+                        <select [(ngModel)]="gender" name="gender" id="sex">
 
-                          <option *ngFor="let gender of genderList" [ngValue]="day">{{gender}}</option>
+                          <option *ngFor="let gender of genderList" [ngValue]="gender">{{gender}}</option>
                         </select>
 
                       </div>
 
                       <div class="mlist-field">
                         <label for="birthday">Birth Date</label>
-                        <select name="dobDay" id="dobMonth">
+                        <select [(ngModel)]="day" name="dobDay" id="dobMonth">
                           <option value="">Day</option>
                           <option *ngFor="let day of dayList" [ngValue]="day">{{day}}</option>
                         </select>
 
-                        <select name="dobMonth" id="dobDay">
+                        <select [(ngModel)]="month" name="dobMonth" id="dobDay">
                           <option value="">Month</option>
                           <option *ngFor="let month of monthList" [ngValue]="month">{{month}}</option>
                         </select>
 
 
-                        <select name="year" id="dobYear">
+                        <select [(ngModel)]="year" name="year" id="dobYear">
                           <option value="">Year</option>
                           <option *ngFor="let year of yearList" [ngValue]="year">{{year}}</option>
                         </select>
@@ -137,7 +121,7 @@
                       </div>
                     </div>
                     <div class="mlist-submit-new">
-                      <input class="submit" type="submit" value="Submit">
+                      <input class="submit" type="submit" value="Submit" (click)='joinMailing(); subscribe();' >
                     </div>
                   </div>
                 </form>

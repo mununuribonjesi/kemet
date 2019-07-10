@@ -24,10 +24,12 @@
     "@fortawesome/fontawesome-free": "^5.8.1",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
+    "guid-typescript": "^1.0.9",
     "instafeed.js": "^1.4.1",
     "jquery": "^3.4.0",
     "primeng": "^7.0.5",
     "rxjs": "~6.3.3",
+    "uuid": "^3.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
