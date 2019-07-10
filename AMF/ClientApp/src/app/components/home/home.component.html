@@ -24,7 +24,7 @@
           <div class="mlist-outer-wrapper embedded-inline-list country-detect customPageName">
             <div class="mlist-wrapper">
               <div *ngIf="!isMailLst">
-                <form class="join-button-form" id="splashPageSignup" method="get" action="" autocomplete="off" novalidate="novalidate">
+                <form class="join-button-form" id="splashPageSignup"  autocomplete="off" #joinForm="ngForm" >
                   <fieldset>
                     <div class="firstFormOverll">
                       <div class="mlist-header">
@@ -32,12 +32,22 @@
                       </div>
                       <div class="firstform">
                         <div class="mlist-field email">
-                          <input [(ngModel)]="email" id="email" name="email" tabindex="-1" type="email" placeholder="Email Address" onfocus="this.placeholder=''" class="m-required m-email">
-                        </div>
-                        <div class="dummySubmit">
-                          <a class="icon-go-arrow arrow-link" (click)='joinMailing();'><i class="fas fa-arrow-right"></i></a>
+                          <input [(ngModel)]="email" id="email" name="Email" type="email" placeholder="Email Address" class="m-required m-email">
 
+                          <div *ngIf="iserrorEmail">
+                       
+                              <label style="font-size:9px; color:red" class="error">
+                                Email address is required
+                              </label>
+                         
+                          </div>
                         </div>
+     
+             
+                          <div class="dummySubmit">
+                            <a class="icon-go-arrow arrow-link" (click)='joinMailing(email);'><i class="fas fa-arrow-right"></i></a>
+                          </div>
+               
                       </div>
                     </div>
                   </fieldset>
@@ -45,10 +55,10 @@
               </div>
 
               <div *ngIf="isMailLst">
-                <form id="secondForm" method="get" action="" novalidate="novalidate">
+                <form id="secondForm" method="get" action="" novalidate="novalidate" >
                   <div id="thankyoublock-innerwrapper">
                     <div class="secondFormCloseWrap">
-                      <a (click)='joinMailing();'>x</a>
+                      <a (click)='closeMailingList();'>x</a>
                     </div>
                     <div id="secondary-list-values" class="secondary-list-values">
                       <div class="mlist-field postalcode">
@@ -121,7 +131,7 @@
                       </div>
                     </div>
                     <div class="mlist-submit-new">
-                      <input class="submit" type="submit" value="Submit" (click)='joinMailing(); subscribe();' >
+                      <input class="submit" type="button" value="Submit" (click)='subscribe();' >
                     </div>
                   </div>
                 </form>

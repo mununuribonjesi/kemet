@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   city: string;
   objSubscribers: subscribers;
   objSubscribedEmails = subscribedEmails;
+  iserrorEmail: boolean = false;
 
   constructor(private _mailingListService: MailingListService) {
 
@@ -44,7 +45,7 @@ export class HomeComponent implements OnInit {
     this.dayList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
     this.yearList = this.getRangeOfYears();
     this.genderList = ["Unspecified", "Male", "Female"];
-
+    this.email = '';
 
     this._mailingListService.getCountries().subscribe(
       data => {
@@ -52,7 +53,24 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  joinMailing() {
+  joinMailing(type:string) {
+
+
+    if (this.isValidEmail(type)) {
+      this.isMailLst = !this.isMailLst;
+      this.iserrorEmail = false;
+    }
+
+    else {
+
+      this.iserrorEmail = !this.iserrorEmail;
+
+    }
+
+  }
+
+  closeMailingList()
+  {
     this.isMailLst = !this.isMailLst;
   }
 
@@ -88,14 +106,17 @@ export class HomeComponent implements OnInit {
   getSubscribedEmails(emailID: Guid) {
 
     var subscriptionEmail = new subscribedEmails();
-
     subscriptionEmail.email = this.email;
     subscriptionEmail.emailID = emailID.toString();
-
     return subscriptionEmail
   }
 
+  isValidEmail(email: string): boolean {
 
+    email = email.replace(/\s/g, "");
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
+  }
   subscribe() {
 
     var emailID = Guid.create();
@@ -112,6 +133,8 @@ export class HomeComponent implements OnInit {
         this.objSubscribedEmails = data;
       }
     );
+
+    this.isMailLst = !this.isMailLst;
   }
 }
 
