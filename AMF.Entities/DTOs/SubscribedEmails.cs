@@ -10,6 +10,5 @@ namespace AMF.Entities.DTOs
         [Key]
         public Guid EmailID { get; set; }
         public String Email { get; set; }
-
     }
 }

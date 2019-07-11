@@ -16,6 +16,5 @@ namespace AMF.Entities.DTOs
         public Guid EmailID { get; set; }
         public String City { get; set; }
         public String PostCode { get; set; }
-
     }
 }

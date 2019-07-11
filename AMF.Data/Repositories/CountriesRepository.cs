@@ -11,7 +11,6 @@ namespace AMF.Data.Repositories
         public CountriesRepository(DatabaseContext context)
         :base(context)
         { }
-
         public new IEnumerable<Countries> GetAll()
         {
             return Context.Set<Countries>().ToList();
