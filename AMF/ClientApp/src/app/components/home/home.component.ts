@@ -35,6 +35,8 @@ export class HomeComponent implements OnInit {
   objSubscribers: subscribers;
   objSubscribedEmails = subscribedEmails;
   iserrorEmail: boolean = false;
+  isTerm: boolean = false;
+  Terms: string;
 
   constructor(private _mailingListService: MailingListService) {
 
@@ -46,7 +48,7 @@ export class HomeComponent implements OnInit {
     this.yearList = this.getRangeOfYears();
     this.genderList = ["Unspecified", "Male", "Female"];
     this.email = '';
-
+    this.Terms = 'Terms'
     this._mailingListService.getCountries().subscribe(
       data => {
         this.lstCountries = data;
@@ -54,17 +56,13 @@ export class HomeComponent implements OnInit {
   }
 
   joinMailing(type:string) {
-
-
     if (this.isValidEmail(type)) {
       this.isMailLst = !this.isMailLst;
       this.iserrorEmail = false;
     }
 
     else {
-
       this.iserrorEmail = !this.iserrorEmail;
-
     }
 
   }
@@ -75,6 +73,7 @@ export class HomeComponent implements OnInit {
   }
 
   getRangeOfYears() {
+
     var currentYear = new Date().getFullYear();
     var yearRange = [];
     var i = 0;
@@ -117,6 +116,23 @@ export class HomeComponent implements OnInit {
     var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(email);
   }
+
+  isTerms(){
+
+    this.isTerm = !this.isTerm;
+
+    if (this.isTerm) {
+
+      this.Terms = 'Hide';
+    }
+
+    else {
+
+      this.Terms = 'Terms';
+    }
+
+
+  }
   subscribe() {
 
     var emailID = Guid.create();
@@ -133,7 +149,6 @@ export class HomeComponent implements OnInit {
         this.objSubscribedEmails = data;
       }
     );
-
     this.isMailLst = !this.isMailLst;
   }
 }

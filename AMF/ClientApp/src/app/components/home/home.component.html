@@ -35,21 +35,37 @@
                           <input [(ngModel)]="email" id="email" name="Email" type="email" placeholder="Email Address" class="m-required m-email">
 
                           <div *ngIf="iserrorEmail">
-                       
-                              <label style="font-size:9px; color:red" class="error">
-                                Email address is required
-                              </label>
-                         
+
+                            <label style="font-size:9px; color:red" class="error">
+                              Email address is required
+                            </label>
+
                           </div>
                         </div>
-     
-             
-                          <div class="dummySubmit">
-                            <a class="icon-go-arrow arrow-link" (click)='joinMailing(email);'><i class="fas fa-arrow-right"></i></a>
-                          </div>
-               
+
+
+                        <div class="dummySubmit">
+                          <a class="icon-go-arrow arrow-link" (click)='joinMailing(email);'><i class="fas fa-arrow-right"></i></a>
+                        </div>
+
                       </div>
-                    </div>
+
+                      <div class="termsWrapper first">
+
+                        <div class="terms">
+
+                          <a (click)='isTerms()' class="terms showing">{{Terms}}</a>
+
+                        </div>
+
+                        <div *ngIf="isTerm">
+                          <div class="termsContent" style="">
+                            By submitting my information, I agree to receive personalized updates and marketing messages about <span class="artist-inline">Muni Banks</span> based on my information, interests, activities, website visits and device data and in accordance with the <a href="https://www.freeprivacypolicy.com/privacy/view/7dfa0f3098f6c9850b622fb8b4047ad2" target="_blank" class="external-link" rel="nofollow" title="Follow link">Privacy&nbsp;Policy</a>. I understand that I can opt-out at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com</a>.
+                          </div>
+                          </div>
+                        </div>
+
+                      </div>
                   </fieldset>
                 </form>
               </div>
