@@ -42,7 +42,7 @@ a {
 }
 
 .button-white:hover {
-  background-color: #AA3939;
+  background-color: #EA4335;
 }
 
 
@@ -110,7 +110,7 @@ select::-ms-expand {
 
 .mlist-outer-wrapper.embedded-inline-list.country-detect {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
 }
@@ -123,6 +123,7 @@ fieldset
 .firstFormOverll {
   /* max-width: 680px; */
   margin: 50px auto 0;
+  width:300px;
 }
 
 
@@ -636,4 +637,10 @@ a {
   font-weight: 450;
   font-style: normal;
   background: #000;
+}
+
+.col-sm-12
+{
+
+  margin-top: 30px !important;
 }
