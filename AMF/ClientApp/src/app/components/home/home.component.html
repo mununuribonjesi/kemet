@@ -1,165 +1,189 @@
 
 <div>
-  <div style="background-color:#EA4335 !important; color:black !important;" class="jumbotron jumbotron-fluid">
-    <div class="container black-text">
-      <h1 class="text-center display-4 black-text">MuniBanks&reg;</h1>
+    <div style="background-color:#EA4335 !important; color:black !important;" class="jumbotron jumbotron-fluid">
+        <div class="container black-text">
+            <h1 class="text-center display-4 black-text">Haze Billz</h1>
+        </div>
     </div>
-  </div>
 </div>
 
-<header class="masthead">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-sm-12 text-center">
+<div>
 
-        <h1 style="color: white !important; font-family:'Open Sans', sans-serif;" class="font-weight-light">Cashier</h1>
-        <div class="banner-links-container">
-          <a class="button-white w-inline-block" href="/tour-2" target="_blank">
-            <div>
-              SHOP
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-sm-12 text-center">
+
+
+                    <div class="banner-links-container">
+                        <a class="button-white w-inline-block" href="/tour-2" target="_blank">
+                            <div>
+                                Download Music
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mlistContent">
+                        <div class="mlist-outer-wrapper embedded-inline-list country-detect customPageName">
+                            <div class="mlist-wrapper">
+                                <div *ngIf="!isMailLst">
+                                    <form class="join-button-form" id="splashPageSignup" autocomplete="off" #joinForm="ngForm">
+                                        <fieldset>
+                                            <div class="firstFormOverll">
+                                                <div class="mlist-header">
+                                                    join my mailing list
+                                                </div>
+                                                <div class="firstform">
+                                                    <div class="mlist-field email">
+                                                        <input [(ngModel)]="email" id="email" name="Email" type="email" placeholder="Email Address" class="m-required m-email">
+
+                                                        <div *ngIf="iserrorEmail">
+
+                                                            <label style="font-size:9px; color:red" class="error">
+                                                                Email address is required
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="dummySubmit">
+                                                        <a class="icon-go-arrow arrow-link" (click)='joinMailing(email);'><i class="fas fa-arrow-right"></i></a>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="termsWrapper first">
+
+                                                    <div class="terms">
+
+                                                        <a (click)='isTerms()' class="terms showing">{{Terms}}</a>
+
+                                                    </div>
+
+                                                    <div *ngIf="isTerm">
+                                                        <div class="termsContent" style="">
+                                                            By submitting my information, I agree to receive personalized updates and marketing messages about <span class="artist-inline">Muni Banks</span> based on my information, interests, activities, website visits and device data and in accordance with the <a href="https://www.freeprivacypolicy.com/privacy/view/7dfa0f3098f6c9850b622fb8b4047ad2" target="_blank" class="external-link" rel="nofollow" title="Follow link">Privacy&nbsp;Policy</a>. I understand that I can opt-out at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com</a>.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+
+                                <div *ngIf="isMailLst">
+                                    <form id="secondForm">
+                                        <div id="thankyoublock-innerwrapper">
+                                            <div class="secondFormCloseWrap">
+                                                <a (click)='closeMailingList();'>x</a>
+                                            </div>
+                                            <div id="secondary-list-values" class="secondary-list-values">
+                                                <div class="mlist-field postalcode">
+                                                    <label for="postalcode">Postal Code</label>
+                                                    <input [(ngModel)]="postCode" id="postalcode" name="postalcode" type="text" autofocus="">
+                                                </div>
+
+                                                <div class="mlist-field postalcode">
+                                                    <label for="postalcode">City</label>
+                                                    <input [(ngModel)]="city" id="postalcode" name="city" type="text" autofocus="">
+                                                </div>
+
+                                                <div class="mlist-field country">
+                                                    <label for="country"> Country </label>
+                                                    <select [(ngModel)]="country" id="country" name="country" class="m-required valid">
+                                                        <option value="">Select a country</option>
+                                                        <option *ngFor="let country of lstCountries" [ngValue]="country.countryID">{{country.country}}</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="mlist-field mlist-field1">
+
+                                                    <label for="firstname">First name</label>
+
+                                                    <input [(ngModel)]="firstName" id="firstname" name="firstname" type="text">
+
+                                                </div>
+
+                                                <div class="mlist-field mlist-field1">
+
+                                                    <label for="firstname">Last name</label>
+
+                                                    <input [(ngModel)]="lastName" id="lastName" name="lastname" type="text">
+
+                                                </div>
+
+                                                <div class="mlist-field">
+                                                    <label for="birthday">Gender</label>
+                                                    <select [(ngModel)]="gender" name="gender" id="sex">
+
+                                                        <option *ngFor="let gender of genderList" [ngValue]="gender">{{gender}}</option>
+                                                    </select>
+
+                                                </div>
+
+                                                <div class="mlist-field">
+                                                    <label for="birthday">Birth Date</label>
+                                                    <select [(ngModel)]="day" name="dobDay" id="dobMonth">
+                                                        <option value="">Day</option>
+                                                        <option *ngFor="let day of dayList" [ngValue]="day">{{day}}</option>
+                                                    </select>
+
+                                                    <select [(ngModel)]="month" name="dobMonth" id="dobDay">
+                                                        <option value="">Month</option>
+                                                        <option *ngFor="let month of monthList" [ngValue]="month">{{month}}</option>
+                                                    </select>
+
+
+                                                    <select [(ngModel)]="year" name="year" id="dobYear">
+                                                        <option value="">Year</option>
+                                                        <option *ngFor="let year of yearList" [ngValue]="year">{{year}}</option>
+                                                    </select>
+
+
+                                                </div>
+                                                <input id="mainListId" name="newsletterId" type="hidden" value="14075551">
+                                                <div class="mlist-checks">
+                                                    <input type="checkbox" class="global-list-checkbox" name="newsletterId" value="50">
+                                                    <label class="global-list" for="global-list">Sign me up to discover more artists like <span class="artist-inline">Roddy&nbsp;Ricch</span> and other offers.</label>
+                                                </div>
+                                            </div>
+                                            <div class="mlist-submit-new">
+                                                <input class="submit" type="button" value="Submit" (click)='subscribe();'>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--Second form End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </a>
         </div>
-        <div class="mlistContent">
-          <div class="mlist-outer-wrapper embedded-inline-list country-detect customPageName">
-            <div class="mlist-wrapper">
-              <div *ngIf="!isMailLst">
-                <form class="join-button-form" id="splashPageSignup"  autocomplete="off" #joinForm="ngForm" >
-                  <fieldset>
-                    <div class="firstFormOverll">
-                      <div class="mlist-header">
-                        join my mailing list
-                      </div>
-                      <div class="firstform">
-                        <div class="mlist-field email">
-                          <input [(ngModel)]="email" id="email" name="Email" type="email" placeholder="Email Address" class="m-required m-email">
+    </header>
+</div>
 
-                          <div *ngIf="iserrorEmail">
-
-                            <label style="font-size:9px; color:red" class="error">
-                              Email address is required
-                            </label>
-
-                          </div>
-                        </div>
-
-
-                        <div class="dummySubmit">
-                          <a class="icon-go-arrow arrow-link" (click)='joinMailing(email);'><i class="fas fa-arrow-right"></i></a>
-                        </div>
-
-                      </div>
-
-                      <div class="termsWrapper first">
-
-                        <div class="terms">
-
-                          <a (click)='isTerms()' class="terms showing">{{Terms}}</a>
-
-                        </div>
-
-                        <div *ngIf="isTerm">
-                          <div class="termsContent" style="">
-                            By submitting my information, I agree to receive personalized updates and marketing messages about <span class="artist-inline">Muni Banks</span> based on my information, interests, activities, website visits and device data and in accordance with the <a href="https://www.freeprivacypolicy.com/privacy/view/7dfa0f3098f6c9850b622fb8b4047ad2" target="_blank" class="external-link" rel="nofollow" title="Follow link">Privacy&nbsp;Policy</a>. I understand that I can opt-out at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com</a>.
-                          </div>
-                          </div>
-                        </div>
-
-                      </div>
-                  </fieldset>
-                </form>
-              </div>
-
-              <div *ngIf="isMailLst">
-                <form id="secondForm">
-                  <div id="thankyoublock-innerwrapper">
-                    <div class="secondFormCloseWrap">
-                      <a (click)='closeMailingList();'>x</a>
-                    </div>
-                    <div id="secondary-list-values" class="secondary-list-values">
-                      <div class="mlist-field postalcode">
-                        <label for="postalcode">Postal Code</label>
-                        <input [(ngModel)]="postCode" id="postalcode" name="postalcode" type="text" autofocus="">
-                      </div>
-
-                      <div class="mlist-field postalcode">
-                        <label for="postalcode">City</label>
-                        <input [(ngModel)]="city" id="postalcode" name="city" type="text" autofocus="">
-                      </div>
-
-                      <div class="mlist-field country">
-                        <label for="country"> Country </label>
-                        <select [(ngModel)]="country" id="country" name="country" class="m-required valid">
-                          <option value="">Select a country</option>
-                          <option *ngFor="let country of lstCountries" [ngValue]="country.countryID">{{country.country}}</option>
-                        </select>
-                      </div>
-
-                      <div class="mlist-field mlist-field1">
-
-                        <label for="firstname">First name</label>
-
-                        <input [(ngModel)]="firstName" id="firstname" name="firstname" type="text">
-
-                      </div>
-
-                      <div class="mlist-field mlist-field1">
-
-                        <label for="firstname">Last name</label>
-
-                        <input [(ngModel)]="lastName" id="lastName" name="lastname" type="text">
-
-                      </div>
-
-                      <div class="mlist-field">
-                        <label for="birthday">Gender</label>
-                        <select [(ngModel)]="gender" name="gender" id="sex">
-
-                          <option *ngFor="let gender of genderList" [ngValue]="gender">{{gender}}</option>
-                        </select>
-
-                      </div>
-
-                      <div class="mlist-field">
-                        <label for="birthday">Birth Date</label>
-                        <select [(ngModel)]="day" name="dobDay" id="dobMonth">
-                          <option value="">Day</option>
-                          <option *ngFor="let day of dayList" [ngValue]="day">{{day}}</option>
-                        </select>
-
-                        <select [(ngModel)]="month" name="dobMonth" id="dobDay">
-                          <option value="">Month</option>
-                          <option *ngFor="let month of monthList" [ngValue]="month">{{month}}</option>
-                        </select>
-
-
-                        <select [(ngModel)]="year" name="year" id="dobYear">
-                          <option value="">Year</option>
-                          <option *ngFor="let year of yearList" [ngValue]="year">{{year}}</option>
-                        </select>
-
-
-                      </div>
-                      <input id="mainListId" name="newsletterId" type="hidden" value="14075551">
-                      <div class="mlist-checks">
-                        <input type="checkbox" class="global-list-checkbox" name="newsletterId" value="50">
-                        <label class="global-list" for="global-list">Sign me up to discover more artists like <span class="artist-inline">Roddy&nbsp;Ricch</span> and other offers.</label>
-                      </div>
-                    </div>
-                    <div class="mlist-submit-new">
-                      <input class="submit" type="button" value="Submit" (click)='subscribe();' >
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <!--Second form End -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+<div class="text-center">
+    <figure class="half">
+        <iframe src="https://www.youtube.com/embed/R6H0NX6XuF8"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/JZi0mZlvOJ4"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/pPxYX4Iq3cA"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/nZwJpTYT2vA"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/XsBQZCN4ryw"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/QNFiO4HpiWE"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/BwDHcKGyCtg"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <iframe src="https://www.youtube.com/embed/m53JjZ7LffU"
+                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </figure>
+</div>
 
 
 
