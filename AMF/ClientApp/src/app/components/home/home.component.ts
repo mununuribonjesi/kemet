@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MailingListService } from 'src/app/services/MailingListService';
 import { subscribers } from 'src/app/dtos/Subscribers';
-import { countries } from 'src/app/dtos/Countries';
+import { countries } from 'src/app/dtos/countries';
 import { Guid } from "guid-typescript";
 import { subscribedEmails } from 'src/app/dtos/subscribedEmails';
 import { Subscription } from 'rxjs';

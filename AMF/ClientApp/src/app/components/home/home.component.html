@@ -7,10 +7,12 @@
   </div>
 </div>
 
-<header class="masthead">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-sm-12 text-center">
+<div>
+
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-sm-12 text-center">
 
         <h1 style="color: white !important; font-family:'Open Sans', sans-serif;" class="font-weight-light">Synonyms Volume 1</h1>
 
@@ -37,29 +39,29 @@
                         <div class="mlist-field email">
                           <input [(ngModel)]="email" id="email" name="Email" type="email" placeholder="Email Address" class="m-required m-email">
 
-                          <div *ngIf="iserrorEmail">
+                                                        <div *ngIf="iserrorEmail">
 
-                            <label style="font-size:9px; color:red" class="error">
-                              Email address is required
-                            </label>
+                                                            <label style="font-size:9px; color:red" class="error">
+                                                                Email address is required
+                                                            </label>
 
-                          </div>
-                        </div>
+                                                        </div>
+                                                    </div>
 
 
-                        <div class="dummySubmit">
-                          <a class="icon-go-arrow arrow-link" (click)='joinMailing(email);'><i class="fas fa-arrow-right"></i></a>
-                        </div>
+                                                    <div class="dummySubmit">
+                                                        <a class="icon-go-arrow arrow-link" (click)='joinMailing(email);'><i class="fas fa-arrow-right"></i></a>
+                                                    </div>
 
-                      </div>
+                                                </div>
 
-                      <div class="termsWrapper first">
+                                                <div class="termsWrapper first">
 
-                        <div class="terms">
+                                                    <div class="terms">
 
-                          <a (click)='isTerms()' class="terms showing">{{Terms}}</a>
+                                                        <a (click)='isTerms()' class="terms showing">{{Terms}}</a>
 
-                        </div>
+                                                    </div>
 
                         <div *ngIf="isTerm">
                           <div class="termsContent" style="">
@@ -87,61 +89,61 @@
                         <input [(ngModel)]="postCode" id="postalcode" name="postalcode" type="text" autofocus="">
                       </div>
 
-                      <div class="mlist-field postalcode">
-                        <label for="postalcode">City</label>
-                        <input [(ngModel)]="city" id="postalcode" name="city" type="text" autofocus="">
-                      </div>
+                                                <div class="mlist-field postalcode">
+                                                    <label for="postalcode">City</label>
+                                                    <input [(ngModel)]="city" id="postalcode" name="city" type="text" autofocus="">
+                                                </div>
 
-                      <div class="mlist-field country">
-                        <label for="country"> Country </label>
-                        <select [(ngModel)]="country" id="country" name="country" class="m-required valid">
-                          <option value="">Select a country</option>
-                          <option *ngFor="let country of lstCountries" [ngValue]="country.countryID">{{country.country}}</option>
-                        </select>
-                      </div>
+                                                <div class="mlist-field country">
+                                                    <label for="country"> Country </label>
+                                                    <select [(ngModel)]="country" id="country" name="country" class="m-required valid">
+                                                        <option value="">Select a country</option>
+                                                        <option *ngFor="let country of lstCountries" [ngValue]="country.countryID">{{country.country}}</option>
+                                                    </select>
+                                                </div>
 
-                      <div class="mlist-field mlist-field1">
+                                                <div class="mlist-field mlist-field1">
 
-                        <label for="firstname">First name</label>
+                                                    <label for="firstname">First name</label>
 
-                        <input [(ngModel)]="firstName" id="firstname" name="firstname" type="text">
+                                                    <input [(ngModel)]="firstName" id="firstname" name="firstname" type="text">
 
-                      </div>
+                                                </div>
 
-                      <div class="mlist-field mlist-field1">
+                                                <div class="mlist-field mlist-field1">
 
-                        <label for="firstname">Last name</label>
+                                                    <label for="firstname">Last name</label>
 
-                        <input [(ngModel)]="lastName" id="lastName" name="lastname" type="text">
+                                                    <input [(ngModel)]="lastName" id="lastName" name="lastname" type="text">
 
-                      </div>
+                                                </div>
 
-                      <div class="mlist-field">
-                        <label for="birthday">Gender</label>
-                        <select [(ngModel)]="gender" name="gender" id="sex">
+                                                <div class="mlist-field">
+                                                    <label for="birthday">Gender</label>
+                                                    <select [(ngModel)]="gender" name="gender" id="sex">
 
-                          <option *ngFor="let gender of genderList" [ngValue]="gender">{{gender}}</option>
-                        </select>
+                                                        <option *ngFor="let gender of genderList" [ngValue]="gender">{{gender}}</option>
+                                                    </select>
 
-                      </div>
+                                                </div>
 
-                      <div class="mlist-field">
-                        <label for="birthday">Birth Date</label>
-                        <select [(ngModel)]="day" name="dobDay" id="dobMonth">
-                          <option value="">Day</option>
-                          <option *ngFor="let day of dayList" [ngValue]="day">{{day}}</option>
-                        </select>
+                                                <div class="mlist-field">
+                                                    <label for="birthday">Birth Date</label>
+                                                    <select [(ngModel)]="day" name="dobDay" id="dobMonth">
+                                                        <option value="">Day</option>
+                                                        <option *ngFor="let day of dayList" [ngValue]="day">{{day}}</option>
+                                                    </select>
 
-                        <select [(ngModel)]="month" name="dobMonth" id="dobDay">
-                          <option value="">Month</option>
-                          <option *ngFor="let month of monthList" [ngValue]="month">{{month}}</option>
-                        </select>
+                                                    <select [(ngModel)]="month" name="dobMonth" id="dobDay">
+                                                        <option value="">Month</option>
+                                                        <option *ngFor="let month of monthList" [ngValue]="month">{{month}}</option>
+                                                    </select>
 
 
-                        <select [(ngModel)]="year" name="year" id="dobYear">
-                          <option value="">Year</option>
-                          <option *ngFor="let year of yearList" [ngValue]="year">{{year}}</option>
-                        </select>
+                                                    <select [(ngModel)]="year" name="year" id="dobYear">
+                                                        <option value="">Year</option>
+                                                        <option *ngFor="let year of yearList" [ngValue]="year">{{year}}</option>
+                                                    </select>
 
 
                       </div>

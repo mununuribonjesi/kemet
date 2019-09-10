@@ -1,8 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using AMF.Entities.DTOs;
+﻿using AMF.Entities.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace AMF.Entities.Models
 {
