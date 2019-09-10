@@ -1,0 +1,9 @@
+steps:
+- script: dotnet restore
+- task: DotNetCoreCLI@2
+  displayName: 'Install dotnetsay'
+  inputs:
+    command: custom
+    custom: tool
+    arguments: 'install -g dotnetsay'
+
