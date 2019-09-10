@@ -1,8 +1,9 @@
 steps:
-- script: dotnet restore
-- task: DotNetCoreCLI@2
-  displayName: 'Install dotnetsay'
+- task: NuGetCommand@2
   inputs:
-    command: custom
-    custom: tool
-    arguments: 'install -g dotnetsay'
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
