@@ -2,7 +2,7 @@
 <div>
   <div style="background-color:#EA4335 !important; color:black !important;" class="jumbotron jumbotron-fluid">
     <div class="container black-text">
-      <h1 class="text-center display-4 black-text">MuniBanks&reg;</h1>
+      <h1 class="text-center display-4 black-text">Haze Billz</h1>
     </div>
   </div>
 </div>
@@ -12,19 +12,22 @@
     <div class="row h-100 align-items-center">
       <div class="col-sm-12 text-center">
 
-        <h1 style="color: white !important; font-family:'Open Sans', sans-serif;" class="font-weight-light">Cashier</h1>
-        <div class="banner-links-container">
-          <a class="button-white w-inline-block" href="/tour-2" target="_blank">
-            <div>
-              SHOP
-            </div>
-          </a>
-        </div>
-        <div class="mlistContent">
-          <div class="mlist-outer-wrapper embedded-inline-list country-detect customPageName">
-            <div class="mlist-wrapper">
-              <div *ngIf="!isMailLst">
-                <form class="join-button-form" id="splashPageSignup"  autocomplete="off" #joinForm="ngForm" >
+        <h1 style="color: white !important; font-family:'Open Sans', sans-serif;" class="font-weight-light">Synonyms Volume 1</h1>
+
+
+        <div *ngIf="!isMailLst">
+          <div class="banner-links-container">
+            <a class="button-white w-inline-block" href="/tour-2" target="_blank">
+              <div>
+                Download
+              </div>
+            </a>
+          </div>
+          <div class="mlistContent">
+            <div class="mlist-outer-wrapper embedded-inline-list country-detect customPageName">
+              <div class="mlist-wrapper">
+
+                <form class="join-button-form" id="splashPageSignup" autocomplete="off" #joinForm="ngForm">
                   <fieldset>
                     <div class="firstFormOverll">
                       <div class="mlist-header">
@@ -62,14 +65,16 @@
                           <div class="termsContent" style="">
                             By submitting my information, I agree to receive personalized updates and marketing messages about <span class="artist-inline">Muni Banks</span> based on my information, interests, activities, website visits and device data and in accordance with the <a href="https://www.freeprivacypolicy.com/privacy/view/7dfa0f3098f6c9850b622fb8b4047ad2" target="_blank" class="external-link" rel="nofollow" title="Follow link">Privacy&nbsp;Policy</a>. I understand that I can opt-out at any time by emailing <a href="mailto:privacypolicy@wmg.com">privacypolicy@wmg.com</a>.
                           </div>
-                          </div>
                         </div>
-
                       </div>
+
+                    </div>
                   </fieldset>
                 </form>
               </div>
-
+            </div>
+          </div>
+        </div>
               <div *ngIf="isMailLst">
                 <form id="secondForm">
                   <div id="thankyoublock-innerwrapper">
@@ -147,15 +152,15 @@
                       </div>
                     </div>
                     <div class="mlist-submit-new">
-                      <input class="submit" type="button" value="Submit" (click)='subscribe();' >
+                      <input class="submit" type="button" value="Submit" (click)='subscribe();'>
                     </div>
                   </div>
                 </form>
               </div>
               <!--Second form End -->
-            </div>
-          </div>
-        </div>
+ 
+  
+ 
       </div>
     </div>
   </div>
