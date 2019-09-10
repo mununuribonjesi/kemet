@@ -1,7 +1,8 @@
 steps:
+- script: dotnet restore
 - task: DotNetCoreCLI@2
-  displayName: Build
+  displayName: 'Install dotnetsay'
   inputs:
-    command: build
-    projects: '**/*.csproj'
-    arguments: '--configuration Release' # Update this to match your need
+    command: custom
+    custom: tool
+    arguments: 'install -g dotnetsay'
