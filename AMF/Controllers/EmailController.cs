@@ -1,7 +1,6 @@
 ﻿
 using AMF.Entities.DTOs;
 using AMF.Infrastructure.Interfaces;
-using AMF.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AMF.Controllers
