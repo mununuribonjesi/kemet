@@ -1,4 +1,8 @@
 steps:
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '/AMF/ClientApp/package.json'
 - script: dotnet restore
 - task: DotNetCoreCLI@2
   displayName: 'Install dotnetsay'
