@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AMF.Data\AMF.Data.csproj" />
     <ProjectReference Include="..\AMF.Entities\AMF.Entities.csproj" />
   </ItemGroup>
 
