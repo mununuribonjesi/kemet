@@ -33,11 +33,6 @@
     <None Remove="ClientApp\src\app\components\shop\shop.component.ts" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AMF.Datas\AMF.Data.csproj" />
-    <ProjectReference Include="..\AMF.Entity\AMF.Entities.csproj" />
-    <ProjectReference Include="..\AMF.Infrastructures\AMF.Infrastructure.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\dtos\countries.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\dtos\subscribedEmails.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\services\MailingListService.ts" />
