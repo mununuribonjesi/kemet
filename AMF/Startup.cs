@@ -1,9 +1,4 @@
 ﻿using System;
-using AMF.Data.Interfaces.Repositories;
-using AMF.Data.Repositories;
-using AMF.Entities.Models;
-using AMF.Infrastructure.Interfaces;
-using AMF.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
