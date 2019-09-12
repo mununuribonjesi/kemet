@@ -3,11 +3,16 @@ steps:
   inputs:
     command: 'install'
     workingDir: 'AMF/ClientApp'
-- script: dotnet restore
-- task: DotNetCoreCLI@2
-  displayName: 'Install dotnetsay'
+- task: NuGetToolInstaller@1
   inputs:
-    command: custom
-    custom: tool
-    arguments: 'install -g dotnetsay'
+    versionSpec: '4.3.0'
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
 
+    
