@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMF.Entities", "AMF.Entitie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMF.Data", "AMF.Data\AMF.Data.csproj", "{0BD77160-4B49-48C1-A382-9716A83F96A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMF.Infrastructure", "AMF.Infrastructure\AMF.Infrastructure.csproj", "{7DD7A2CD-D0E8-43C8-807B-EBDB6F013766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{0BD77160-4B49-48C1-A382-9716A83F96A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BD77160-4B49-48C1-A382-9716A83F96A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BD77160-4B49-48C1-A382-9716A83F96A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD7A2CD-D0E8-43C8-807B-EBDB6F013766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD7A2CD-D0E8-43C8-807B-EBDB6F013766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD7A2CD-D0E8-43C8-807B-EBDB6F013766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD7A2CD-D0E8-43C8-807B-EBDB6F013766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
